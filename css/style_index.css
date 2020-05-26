@@ -75,6 +75,8 @@ li{
 .header{
     grid-area: header;
     background-color: #050c14;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 .content{
     grid-area:content;
