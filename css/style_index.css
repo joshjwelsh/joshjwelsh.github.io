@@ -88,7 +88,7 @@ li{
 }
 .main-header{
     grid-area:main-header;
-    padding-top:200px;
+    padding-top:100px;
     padding-bottom:200px;
     justify-self:center;
 }
