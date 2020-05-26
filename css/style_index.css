@@ -64,11 +64,11 @@ li{
 .grid{
     display: grid;
 
-    grid-column: 1fr 1fr;
+    grid-column: 1fr;
     grid-template-areas:
-    "header header"
-    "content content"
-    "footer footer"
+    "header"
+    "content"
+    "footer"
     ;
 }
 
@@ -80,15 +80,16 @@ li{
     grid-area:content;
     background-color: #050c14;
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-column: 1fr;
     grid-template-areas:
-    "main-header main-header"
-    "about about"
-    "container container"
+    "main-header"
+    "about"
+    "container"
 }
 .main-header{
     grid-area:main-header;
-    padding:200px;
+    padding-top:200px;
+    padding-bottom:200px;
     justify-self:center;
 }
 .about{
@@ -99,9 +100,10 @@ li{
 .container{
     grid-area:container;
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-column: 1fr;
     grid-template-areas:
-    "list-1 list-2"
+    "list-1"
+    "list-2"
 }
 
 h1#head{
@@ -117,4 +119,36 @@ h1#about{
     color: #57b7da;
     padding: 60px;
 
+}
+
+@media screen and (min-width: 765px){
+
+
+    .grid{
+        display: grid;
+
+        grid-column: 1fr 1fr 1fr;
+        grid-template-areas:
+        ". header ."
+        ". content ."
+        ". footer ."
+        ;
+    }
+    .content{
+        grid-area:content;
+        background-color: #050c14;
+        display: grid;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+        "main-header main-header"
+        "about about"
+        "container container"
+    }
+    .container{
+        grid-area:container;
+        display: grid;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+        "list-1 list-2"
+    }
 }
