@@ -1,0 +1,120 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: #050c14;
+}
+
+a{
+    padding:30px;
+}
+h1{
+    color: #f0f0f0;
+    font-size: 40px;
+}
+h2{
+    color: #f0f0f0;;
+    font-size: 30px;
+}
+h3{
+    color: #172a45;
+    margin-top:5px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+p{
+    font-size: 20px;
+    color:#5d80a0;
+}
+li{
+    font-size: 19px;
+}
+#list-1{
+    grid-area: list-1;
+    margin:20px;
+    padding:20px;
+    justify-self: center;
+}
+#list-2{
+    grid-area: list-2;
+    margin:20px;
+    padding:20px;
+    justify-self: center;
+}
+
+#email{
+    padding: 20px;
+    font-size: 25;
+    color: #57b7da;
+    margin-top: 20px;
+    border: 1px solid #57b7da;
+}
+.side{
+    color:#5d80a0;
+}
+.container{
+    color:#57b7da;
+}
+.github{
+    color: #57b7da;
+    font-size: 20px;
+}
+.grid{
+    display: grid;
+
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer"
+    ;
+}
+
+.header{
+    grid-area: header;
+    background-color: #050c14;
+}
+.content{
+    grid-area:content;
+    background-color: #050c14;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+    "main-header main-header"
+    "about about"
+    "container container"
+}
+.main-header{
+    grid-area:main-header;
+    padding:200px;
+    justify-self:center;
+}
+.about{
+    grid-area:about;
+    padding:80px;
+    justify-self: center;
+}
+.container{
+    grid-area:container;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+    "list-1 list-2"
+}
+
+h1#head{
+    font-size: 60px;
+}
+h1#about{
+
+}
+
+.footer{
+    grid-area:footer;
+    background-color: #02070c;
+    color: #57b7da;
+    padding: 60px;
+
+}
