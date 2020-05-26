@@ -91,7 +91,7 @@ li{
 }
 .main-header{
     grid-area:main-header;
-    padding: 0px 20px;
+    padding: 20px;
     padding-top:100px;
     padding-bottom:200px;
     justify-self:center;
