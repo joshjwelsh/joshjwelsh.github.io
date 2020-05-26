@@ -142,13 +142,13 @@ h1#about{
         grid-template-areas:
         "main-header main-header"
         "about about"
-        "container container"
+        "container container";
     }
     .container{
         grid-area:container;
         display: grid;
         grid-column: 1fr 1fr;
         grid-template-areas:
-        "list-1 list-2"
+        "list-1 list-2";
     }
 }
