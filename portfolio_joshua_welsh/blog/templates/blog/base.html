@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VZVRTWX86P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VZVRTWX86P');
+</script>
+    <link rel="stylesheet" type='text/css' href="{% static 'blog/css/index.css' %}">
+    <link rel="stylesheet" href="https://use.typekit.net/ncq8otg.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <title>Josh - Blog</title>
+</head>
+<body>
+    <div class="grid">
+        <div class="navbar-header">
+            <a href="https://github.com/joshjwelsh" class="github">joshjwelsh</a>
+            <a class="side" href="{% url 'index' %}">home</a>
+            <a class="side" href="{% url 'code' %}">code</a>
+            <a class="side" href="">contact</a>
+            <!-- TODO - create contact template  -->
+        </div>
+        <div class="content">
+            <div class="head">
+                {% block head %}{% endblock %}
+            </div>
+            <div class="content-body">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="archive" id='site__side'>
+                <section>
+                {% regroup all_posts by posted.created_on as year_list %}
+
+                                                    <h4 class="archive-header">Archive:</h4>
+
+                    <ul>
+                        {% for year in year_list %}
+                        <a href="{% url 'archives' year.list.0.created_on.year year.list.0.created_on.month  %}"><li>{{ year.list.0.created_on | date:'F Y' }} </li></a>
+                            {% regroup year.list by posted.month as month_list %}
+                            <!-- <ul>
+                                {% for month in month_list %}
+                                <li class="archive-list"><a class='archive-link'
+                                        href='#'>({{
+                                        month.list|length }})</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li> -->
+                        {% endfor %}
+                    </ul>
+                </section>
+              
+            </div>
+        </div>
+        <div class="footer">
+            <h3>Josh</h3>
+        </div>
+    </div>
+</body>
+</html>
