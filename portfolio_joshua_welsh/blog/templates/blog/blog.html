@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+
+{% block head %}
+The blog of Joshua Welsh
+{% endblock %}
+
+{% block content %}
+{% for post in posts %}
+<div class="container">
+        <h2>{{post.title }}</h2>
+        <h4>{{post.created_on}}</h4>
+        <p>{{post.content | linebreaks}}</p>
+</div>
+{%endfor %}
+{% endblock %}

@@ -1,0 +1,98 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    color: #f0f0f0;
+    background-color: #050c14;
+    font-family: sans-serif;
+}
+img{
+    height: 250px;
+    margin: 1em;
+}
+
+h3{
+    text-align: justify;
+    color: #57b7da;
+}
+
+p{
+    font-style: italic;
+    font-size: 17px;
+    padding: 3px;
+}
+
+em{}
+
+a{
+    color: #5d80a0;
+}
+
+
+.grid{
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+    grid-gap: 4em;
+    grid-template-areas:
+    "navbar navbar navbar"
+    ". header ."
+    ". container ."
+    ". footer .";
+}
+
+.header{
+    grid-area: header;
+    font-size: 25px;
+    justify-self: center;
+    padding: 20px;
+    margin: 1em;
+}
+
+
+.navbar{
+    grid-area: navbar;
+    display: grid;
+    justify-self: center;
+    grid-column: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:
+    "github home code contact";
+}
+
+.navbar > ul > li{
+    display: inline;
+    padding: 20px;
+}
+
+.container{
+    grid-area: container;
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+    grid-gap: 10em;
+}
+
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+     padding: 20px;
+}
+
+.github{
+    grid-area: github;
+    color: #57b7da;
+}
+
+.home{
+    grid-area: home;
+}
+
+.code{
+    grid-area: code;
+}
+
+.contact{
+    grid-area: contact;
+}

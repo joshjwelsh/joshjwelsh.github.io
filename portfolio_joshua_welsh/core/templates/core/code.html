@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    {% load static %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZVRTWX86P"></script>
     <script>
@@ -13,9 +15,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style_code.css">
+    <link rel="stylesheet" href="{% static 'core/css/style_code.css' %}">
     <title>Josh's Code</title>
 </head>
+
 <body>
     <div class="grid">
         <div class="header">
@@ -27,11 +30,10 @@
                     <a href="https://github.com/joshjwelsh" class="github">joshjwelsh</a>
                 </li>
                 <li class="code" class="list-2">
-                    <a class="side"
-                    href="consulting.html">Consulting</a>
+                    <a class="side" href="{% url 'consulting' %}">Consulting</a>
                 </li>
                 <li class="home" class="list-3">
-                    <a class="side" href="index.html">Home</a>
+                    <a class="side" href="{% url 'index' %} ">Home</a>
                 </li>
                 <li class="contact" class="list-4">
                     <a class="side" href="#">Contact</a>
@@ -41,36 +43,34 @@
         <div class="container">
             <div class="item-grid">
                 <article>
-                    <h3>Software Developer Salaries by Programming Language</h3>
-                    <p><em>Based on stack overflow 2019 data set</em></p>
+                    <h3>Weekly Rent Changes in 10 US Cities</h3>
+                    <p><em>Produced using scraped data from <a href="https://apartments.com">apartments.com</a></em></p>
                 </article>
-                <a href="#"><img src="resources/prog_3.png" alt=""></a>
+                <a href="#"><img src="http://drive.google.com/uc?export=view&id=1T1NbQ3-8WAJdKc39lh4sbww4vKlx_2zR" alt=""></a>
             </div>
-            <div class="item-grid"><article>
-                <h3>Software Developer Salaries by Age</h3>
-                <p><em>Based on stack overflow 2019 data set</em></p>
-                <a href="#"><img src="resources/prog_7.png" alt=""></a>
-            </article>
+            <div class="item-grid">
+                <article>
+                    <h3>Software Developer Salaries by Age</h3>
+                    <p><em>Based on stack overflow 2019 <a href="https://insights.stackoverflow.com/survey">data set</a></em></p>
+                    <a href="#"><img src="http://drive.google.com/uc?export=view&id=1LWxtkaRdNDAu6yLuOnTtu5cCBtVs19_O" alt=""></a>
+                </article>
             </div>
             <div class="item-grid">
                 <article>
                     <h3>Most Popular Programming Languages</h3>
-                    <p><em>Based on stack overflow 2019 data set</em></p>
-                    <a href="#"><img src="resources/prog_5.png" alt=""></a>
+                    <p><em>Based on stack overflow 2019 <a href="https://insights.stackoverflow.com/survey">data set</a></em></p>
+                    <a href="#"><img src="http://drive.google.com/uc?export=view&id=1v5fzoptMqh7rcOioMg6odgOvhpbMQY8x" alt=""></a>
                 </article>
             </div>
             <div class="item-grid">
                 <article>
                     <h3>League of Legends Lore Word Cloud </h3>
-                    <p><em>Based on league of legends lore</em></p>
-                    <a href="#"><img src="resources/prog_6.png" alt=""></a>
+                    <p><em>Based on <a href="https://universe.leagueoflegends.com/en_US/champions/">league of legends lore</a></em></p>
+                    <a href="#"><img src="http://drive.google.com/uc?export=view&id=18lpXNGjQp2rau0d0e8NBi1bXOZ4A5xa1" alt=""></a>
                 </article>
             </div>
         </div>
-        <div class="footer">
-            <h3>Made by Joshua Welsh</h3>
-            <h3> email: joshjwelsh@engineer.com </h3>
-        </div>
     </div>
 </body>
+
 </html>
