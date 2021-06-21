@@ -5,9 +5,12 @@
     font-family: sans-serif;
     background-color: #050c14;
 }
-
+.strong-text{
+    color: #57b7da;
+}
 a{
-    padding:30px;
+    display: inline;
+    padding:10px;
 }
 h1{
     color: #f0f0f0;
@@ -64,44 +67,49 @@ li{
 .grid{
     display: grid;
 
-    grid-column: 1fr 1fr;
+    grid-column: 1fr;
     grid-template-areas:
-    "header header"
-    "content content"
-    "footer footer"
+    "header"
+    "content"
+    "footer"
     ;
 }
 
 .header{
     grid-area: header;
     background-color: #050c14;
+    padding: 10px;
+    margin-bottom: 15px;
 }
 .content{
     grid-area:content;
     background-color: #050c14;
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-column: 1fr;
     grid-template-areas:
-    "main-header main-header"
-    "about about"
-    "container container"
+    "main-header"
+    "about"
+    "container"
 }
 .main-header{
     grid-area:main-header;
-    padding:200px;
+    padding: 20px;
+    padding-top:200px;
+    padding-bottom:200px;
     justify-self:center;
 }
 .about{
     grid-area:about;
     padding:80px;
-    justify-self: center;
+    justify-self: justify;
 }
 .container{
     grid-area:container;
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-column: 1fr;
     grid-template-areas:
-    "list-1 list-2"
+    "list-1"
+    "list-2"
 }
 
 h1#head{
@@ -117,4 +125,34 @@ h1#about{
     color: #57b7da;
     padding: 60px;
 
+}
+
+@media screen and (min-width: 765px){
+    .grid{
+        display: grid;
+
+        grid-column: 1fr 1fr 1fr;
+        grid-template-areas:
+        ". header ."
+        ". content ."
+        ". footer ."
+        ;
+    }
+    .content{
+        grid-area:content;
+        background-color: #050c14;
+        display: grid;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+        "main-header main-header"
+        "about about"
+        "container container";
+    }
+    .container{
+        grid-area:container;
+        display: grid;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+        "list-1 list-2";
+    }
 }
